@@ -1,0 +1,100 @@
+body{
+    font-family:'Kumbh Sans', sans-serif;
+    padding:10px;
+}
+
+.title{
+    display:inline;
+    margin-right: 50px;
+}
+.cart{
+    position: relative;
+    left: 600px;
+}
+/* avatar */
+.avatar{
+    width:40px;
+    height:40px;
+    position: relative;
+    left: 620px;
+    top:5px;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    
+
+}
+.avatar:hover{
+    border-color: hsl(26, 100%, 55%);
+}
+/* containers */
+.big{
+    position:relative;
+    background-color: green;
+    width:1230px;
+    height: 700px;
+    display: flex;
+    align-items: center; /*vertical*/
+  justify-content: center; /*horizontal*/
+
+}
+.containerimg{
+    position: relative;
+width: 500px;
+height: 600px;
+background-color: yellow;
+margin: 10px;
+padding:10px;
+
+}
+.containertxt{
+    position: relative;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(135, 195, 255);
+    margin: 10px;
+    /* padding: 10px; */
+    padding:50px;
+
+}
+/* container txt elements */
+.price{
+    display: inline;
+}
+.discount{
+    display:inline;
+}
+.pricebefore{
+    position: relative;
+    bottom:25px;
+    text-decoration: line-through;
+}
+.changeAmount{
+    /* display:inline-block; */
+    display: flex;
+    position: relative;
+    /* margin:50px; */
+    background-color: hsl(223, 64%, 98%);
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.minus{
+    /* display:inline; */
+  
+    
+}
+.amount{
+    display:inline;
+    margin:25px;
+    
+}
+.plus{
+    /* display:inline; */
+    
+}
+.addToCart{
+    display:inline;
+}
+
