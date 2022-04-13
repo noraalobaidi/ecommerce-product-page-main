@@ -71,20 +71,31 @@ padding:10px;
 .changeAmount{
     /* display:inline-block; */
     display: flex;
-    position: relative;
+    /* position: relative; */
     /* margin:50px; */
     background-color: hsl(223, 64%, 98%);
     width: 120px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
 }
 .minus{
     /* display:inline; */
+    position: relative;
+    background-color: hsl(223, 64%, 98%);
+    border:0px;
+    bottom: 3px;
+
+    
+    /* border-color:hsl(223, 64%, 98%); ;
+    border-radius: 5px; */
   
     
 }
+/* .minus:hover{
+    background-color: hsl(231, 10%, 87%);
+} */
 .amount{
     display:inline;
     margin:25px;
@@ -92,6 +103,8 @@ padding:10px;
 }
 .plus{
     /* display:inline; */
+    background-color: hsl(223, 64%, 98%);
+    border:0px;
     
 }
 .addToCart{
