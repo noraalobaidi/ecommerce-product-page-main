@@ -20,19 +20,23 @@
   
   <div >
     <h1 class="title" style="color:hsl(220, 13%, 13%)">sneakers</h1>
-    <button >Home</button>
-    <button >Collections</button>
-    <button>Men</button>
-    <button>Women</button>
-    <button>About</button>
-    <button>Contact</button>
-    <img class="cart" onclick="cartbox(id)"src="../images/icon-cart.svg" alt="shopping cart">
+    <button class="navButton">Home</button>
+    <button class="navButton">Collections</button>
+    <button class="navButton">Men</button>
+    <button class="navButton">Women</button>
+    <button class="navButton">About</button>
+    <button class="navButton">Contact</button>
+    <img class="cart" onclick="cartbox()" style="cursor: pointer;"src="../images/icon-cart.svg" alt="shopping cart">
+    <h6 class="displaynone" id="cart-amount"></h6>
     <img class="avatar"src="../images/image-avatar.png" alt="profile">
     <hr style="color:hsl(230, 29%, 92%)">
-    <div class="showCartnone" id="show-cart">
+    <div class="displaynone" id="show-cart">
+
       <div style="padding:10px"><h5 style="margin: 0;">Cart</h5></div>
       <hr style="color:hsl(230, 29%, 92%)">
-      <div style="padding:10px"><p style="margin:10px;text-align: center;">Your cart is empty.</p></div>
+      <div style="padding:10px">
+        <div id="cart"style="margin:10px;text-align:center;">Your cart is empty.</div>
+      </div>
       
     </div>
 </div>
@@ -40,20 +44,20 @@
   <div class="containerimg"></div>
   <div class="containertxt">
       <h5 style="color:hsl(26, 100%, 55%)">SNEAKER COMPANY</h5>
-      <h1 style="color:hsl(220, 13%, 13%)">Fall Limited Edition<br>Sneakers</h1>
+      <h1 style="color:hsl(220, 13%, 13%)" id="shoes-name">Fall Limited Edition<br>Sneakers</h1>
       <p style="font-size:16px;text-align: justify;color:hsl(219, 9%, 45%)">These low-profile sneakers are your perfect casual wear companion. Featuring a 
         durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      <h3 class="price">$125.00</h3>
+      <h3 class="price" id="shoes-price">$125.00</h3>
       <div class="discountbox"><h6 class="discount">50%</h6></div>
       <h6 class="pricebefore">$250.00</h6>
       <div style="display:flex";>
         <div class="changeAmount">
-          <button class="minus" onclick="removeOne(amount)"><img src="../images/icon-minus.svg" alt="minus"></button>
+          <button class="minus" onclick="removeOne()"><img src="../images/icon-minus.svg" alt="minus"></button>
           <h5 class="amount"id="amount" style="color:hsl(220, 13%, 13%)"></h5>
           
-          <button class="plus"onclick="addOne(amount)"><img src="../images/icon-plus.svg" alt="plus"></button>
+          <button class="plus"onclick="addOne()"><img src="../images/icon-plus.svg" alt="plus"></button>
         </div>
-        <button class="addToCart"><img style="filter:brightness(300%);margin-right: 20px;width:15px;height: 15px;"src="../images/icon-cart.svg" alt="profile">Add to cart</button>
+        <button class="addToCart" onclick="addToCart()"><img style="filter:brightness(300%);margin-right: 20px;width:15px;height: 15px;"src="../images/icon-cart.svg" alt="profile">Add to cart</button>
       </div>
 
 
