@@ -25,8 +25,8 @@ body{
     align-items: center;
     border-radius: 10px;
     z-index: 1;
-    right: 43px;
-    bottom: 760px;
+    right: 50px;
+    bottom: 563px;
     height: 10px;
     width: 15px;
     margin: 0px;
@@ -70,14 +70,15 @@ body{
 }
 .avatar:hover{
     border-color: hsl(26, 100%, 55%);
+    
 }
 /* containers */
 .big{
     position:relative;
-    /* background-color: green; */
-    background-color: rgb(255, 255, 255);
+    background-color:rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     width:1230px;
-    height: 700px;
+    height: 500px;
     display: flex;
     align-items: center; /*vertical*/
   justify-content: center; /*horizontal*/
@@ -206,6 +207,22 @@ cursor: pointer;
 .thumbnailimg:hover{
 border-color:hsl(26, 100%, 55%);
 opacity:80%;
+width:75px;
+height: 75px;
+}
+
+.bigimg{
+position:relative;
+border-radius: 10px;
+width:350px;
+height: 350px;
+margin: 30px;
+cursor: pointer;
+}
+
+.bigimg:hover{
+width:355px;
+height: 355px;
 }
 
 

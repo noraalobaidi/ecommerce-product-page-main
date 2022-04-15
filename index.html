@@ -62,16 +62,16 @@
 
     <!-- style="display:flex;justify-content:center;align-items: center;" -->
     <div style="display:flex;justify-content: center;align-items: center;">
-      <img src="../images/image-product-1.jpg" style="position:relative;border-radius: 10px;width:350px;height: 350px;margin: 30px;" alt="product 1 image">
+      <img class="bigimg"id="big-img" src="../images/image-product-1.jpg" alt="product 1 image">
     </div>
     
    <div style="display:flex;justify-content:center;">
 
      <!-- thumbnails -->
-    <img class="thumbnailimg"src="../images/image-product-1-thumbnail.jpg" alt="">
-    <img class="thumbnailimg"src="../images/image-product-2-thumbnail.jpg" alt="">
-    <img class="thumbnailimg"src="../images/image-product-3-thumbnail.jpg" alt="">
-    <img class="thumbnailimg"src="../images/image-product-4-thumbnail.jpg" alt="">
+    <img onclick="changeimg(thumb1)"id="thumb1"class="thumbnailimg"src="../images/image-product-1-thumbnail.jpg" alt="">
+    <img onclick="changeimg(thumb2)"id="thumb2"class="thumbnailimg"src="../images/image-product-2-thumbnail.jpg" alt="">
+    <img onclick="changeimg(thumb3)"id="thumb3"class="thumbnailimg"src="../images/image-product-3-thumbnail.jpg" alt="">
+    <img onclick="changeimg(thumb4)"id="thumb4"class="thumbnailimg"src="../images/image-product-4-thumbnail.jpg" alt="">
   </div>
     
 
@@ -103,6 +103,7 @@
 
   </div>
 </div>
+
 
   <!-- Collections
   Men

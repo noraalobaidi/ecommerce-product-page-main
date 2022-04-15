@@ -45,6 +45,7 @@ function addToCart() {
     document.getElementById("total").innerHTML = `$${
       calctotalprice + Number(totalbefore)
     }`;
+    document.getElementById("amount").innerHTML = 0;
   } else if (amount > 0) {
     //for empty cart
     document.getElementById("empty-cart").innerHTML = "";
@@ -57,6 +58,7 @@ function addToCart() {
 
     itemInCart.className = "";
     document.getElementById("checkout").className = "";
+    document.getElementById("amount").innerHTML = 0;
   }
 }
 
@@ -69,4 +71,34 @@ function deleteitem() {
   var cartamountbox = document.getElementById("cart-amount"); //get cart amount box
   cartamountbox.className = "displaynone";
   document.getElementById("checkout").className = "displaynone";
+}
+
+function changeimg(id) {
+  let bigimg = document.getElementById("big-img"); //get big image
+
+  if (id == document.getElementById("thumb1")) {
+    bigimg.src = "../images/image-product-1.jpg"; //change to img 1
+    document.getElementById("thumb1").style.borderColor = "hsl(26, 100%, 55%)";
+    document.getElementById("thumb2").style.borderColor = "white";
+    document.getElementById("thumb3").style.borderColor = "white";
+    document.getElementById("thumb4").style.borderColor = "white";
+  } else if (id == document.getElementById("thumb2")) {
+    bigimg.src = "../images/image-product-2.jpg"; //change to img 2
+    document.getElementById("thumb2").style.borderColor = "hsl(26, 100%, 55%)";
+    document.getElementById("thumb1").style.borderColor = "white";
+    document.getElementById("thumb3").style.borderColor = "white";
+    document.getElementById("thumb4").style.borderColor = "white";
+  } else if (id == document.getElementById("thumb3")) {
+    bigimg.src = "../images/image-product-3.jpg"; //change to img 3
+    document.getElementById("thumb3").style.borderColor = "hsl(26, 100%, 55%)";
+    document.getElementById("thumb1").style.borderColor = "white";
+    document.getElementById("thumb2").style.borderColor = "white";
+    document.getElementById("thumb4").style.borderColor = "white";
+  } else if (id == document.getElementById("thumb4")) {
+    bigimg.src = "../images/image-product-4.jpg"; //change to img 4
+    document.getElementById("thumb4").style.borderColor = "hsl(26, 100%, 55%)";
+    document.getElementById("thumb1").style.borderColor = "white";
+    document.getElementById("thumb2").style.borderColor = "white";
+    document.getElementById("thumb3").style.borderColor = "white";
+  }
 }
