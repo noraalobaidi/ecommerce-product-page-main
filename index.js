@@ -29,70 +29,43 @@ function cartbox() {
 }
 
 function addToCart() {
-  //if amount id > than 0
-  //increase cart elements
-  //display cart number
-  //add items to cartbox
-
-  //create div box display it
-  //then if clicked on trash bin hide it
-
-  // update numbers
-
+  let itemInCart = document.getElementById("item-in-cart");
   let amount = document.getElementById("amount").innerHTML; //get amount
   var cartamountbox = document.getElementById("cart-amount"); //get cart amount box
-  let getshoesname = document
-    .getElementById("shoes-name")
-    .innerHTML.replace("<br>", " "); //get shoes name
   let getshoesprice = document
     .getElementById("shoes-price")
     .innerHTML.replace("$", ""); //get shoes price
   let calctotalprice = Number(amount) * Number(getshoesprice); //calculate total price
-
-  if (amount > 0) {
-    document.getElementById("cart").innerHTML = "";
+  if (cartElements > 0 && amount > 0) {
+    //for cart not empty
+    cartElements = cartElements + Number(amount);
+    document.getElementById("cart-amount").innerHTML = cartElements;
+    document.getElementById("item-amount").innerHTML = cartElements;
+    let totalbefore = document.getElementById("total").innerHTML;
+    totalbefore = totalbefore.replace("$", "");
+    document.getElementById("total").innerHTML = `$${
+      calctotalprice + Number(totalbefore)
+    }`;
+  } else if (amount > 0) {
+    //for empty cart
+    document.getElementById("empty-cart").innerHTML = "";
     cartElements = cartElements + Number(amount); //update cartelements
     document.getElementById("cart-amount").innerHTML = cartElements; // get cart amount box
 
     cartamountbox.className = "cartAmount"; //display cart amount box by changing it class
+    document.getElementById("item-amount").innerHTML = amount;
+    document.getElementById("total").innerHTML = `$${calctotalprice}`;
 
-    //create new element
-    let element = document.createElement("div");
-    let trashicon = document.createElement("img");
-    let imgthumbnail = document.createElement("img");
-    imgthumbnail.src = "../images/image-product-1-thumbnail.jpg";
-    trashicon.src = "../images/icon-delete.svg";
-
-    // element.id = id;
-
-    var shoesname = document.createElement("div");
-    shoesname.innerHTML = getshoesname;
-    var shoesprice = document.createElement("div");
-    shoesprice.innerHTML = `$ ${getshoesprice}x${amount}`;
-    var totalprice = document.createElement("div");
-    totalprice.innerHTML = "$" + calctotalprice;
-
-    //style the divs
-    shoesname.style.fontSize = "11px";
-    shoesname.style.color = "hsl(220, 14%, 75%)";
-    shoesprice.style.fontSize = "11px";
-    shoesprice.style.color = "hsl(220, 14%, 75%)";
-    totalprice.style.fontSize = "11px";
-    totalprice.style.color = "black";
-    totalprice.style.display = "inline";
-    shoesprice.style.display = "inline";
-    imgthumbnail.style.width = "50px";
-    imgthumbnail.style.height = "50px";
-    imgthumbnail.style.borderRadius = "3px";
-    imgthumbnail.style.display = "inline";
-
-    //attach the divs to the parrent div element
-    element.append(imgthumbnail);
-    element.append(shoesname);
-    element.append(shoesprice);
-    element.append(totalprice);
-    element.append(trashicon);
-
-    document.getElementById("cart").append(element);
+    itemInCart.className = "";
   }
+}
+
+function deleteitem() {
+  document.getElementById("empty-cart").innerHTML = "Your cart is empty.";
+  let itemInCart = document.getElementById("item-in-cart");
+  itemInCart.className = "displaynone";
+
+  cartElements = 0;
+  var cartamountbox = document.getElementById("cart-amount"); //get cart amount box
+  cartamountbox.className = "displaynone";
 }

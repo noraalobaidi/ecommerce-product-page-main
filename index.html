@@ -35,7 +35,22 @@
       <div style="padding:10px"><h5 style="margin: 0;">Cart</h5></div>
       <hr style="color:hsl(230, 29%, 92%)">
       <div style="padding:10px">
-        <div id="cart"style="margin:10px;text-align:center;">Your cart is empty.</div>
+        <div id="cart"style="margin:10px;">
+          <p id="empty-cart"style="text-align:center">Your cart is empty.</p>
+        <div class="displaynone"id="item-in-cart" style="justify-content: left;">
+          <img style="width: 50px;height: 50px;border-radius: 3px;display: inline;"src="../images/image-product-1-thumbnail.jpg" alt="product img">
+          <div style="width:150px;display:inline-block;position:relative; bottom:10px;">
+            <p style="font-size: 11px;color:hsl(220, 14%, 75%);margin:0px;position: relative;">Fall Limited Edition Sneakers</p>
+            <p style="font-size: 11px;color:hsl(220, 14%, 75%);margin:0px;display: inline-block;position: relative;">$125.00x</p>
+            <p id="item-amount" style="display: inline-block;position: relative;margin:0px;font-size: 11px;color:hsl(220, 14%, 75%)">amount</p>
+            <p id="total" style="display: inline-block;position: relative;margin:0px;font-size: 11px;">$total</p>
+            <img onclick="deleteitem()"style="cursor: pointer;width: 10px;height: 10px;position:relative; bottom:5px;left:10px"src="../images/icon-delete.svg" alt="">
+          </div>
+          
+          
+        </div>
+        
+        </div>
       </div>
       
     </div>
