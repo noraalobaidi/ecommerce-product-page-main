@@ -1,7 +1,6 @@
 //initilize product amount to 0
 document.getElementById("amount").innerHTML = 0;
 let cartElements = 0;
-let id = 0;
 
 //decrese amount of item by 1
 function removeOne() {
@@ -57,6 +56,7 @@ function addToCart() {
     document.getElementById("total").innerHTML = `$${calctotalprice}`;
 
     itemInCart.className = "";
+    document.getElementById("checkout").className = "";
   }
 }
 
@@ -68,4 +68,5 @@ function deleteitem() {
   cartElements = 0;
   var cartamountbox = document.getElementById("cart-amount"); //get cart amount box
   cartamountbox.className = "displaynone";
+  document.getElementById("checkout").className = "displaynone";
 }

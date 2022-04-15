@@ -37,26 +37,48 @@
       <div style="padding:10px">
         <div id="cart"style="margin:10px;">
           <p id="empty-cart"style="text-align:center">Your cart is empty.</p>
-        <div class="displaynone"id="item-in-cart" style="justify-content: left;">
-          <img style="width: 50px;height: 50px;border-radius: 3px;display: inline;"src="../images/image-product-1-thumbnail.jpg" alt="product img">
+        <div class="displaynone"id="item-in-cart" style="justify-content: left;height:fit-content;">
+          <img style="width: 40px;height: 40px;border-radius: 3px;display: inline;position: relative;bottom:5px"src="../images/image-product-1-thumbnail.jpg" alt="product img">
           <div style="width:150px;display:inline-block;position:relative; bottom:10px;">
             <p style="font-size: 11px;color:hsl(220, 14%, 75%);margin:0px;position: relative;">Fall Limited Edition Sneakers</p>
-            <p style="font-size: 11px;color:hsl(220, 14%, 75%);margin:0px;display: inline-block;position: relative;">$125.00x</p>
+            <p style="font-size: 11px;color:hsl(220, 14%, 75%);margin:0px;display: inline-block;position: relative;">$125.00 x </p>
             <p id="item-amount" style="display: inline-block;position: relative;margin:0px;font-size: 11px;color:hsl(220, 14%, 75%)">amount</p>
-            <p id="total" style="display: inline-block;position: relative;margin:0px;font-size: 11px;">$total</p>
-            <img onclick="deleteitem()"style="cursor: pointer;width: 10px;height: 10px;position:relative; bottom:5px;left:10px"src="../images/icon-delete.svg" alt="">
+            <p id="total" style="display: inline-block;position: relative;margin:0px;font-size: 11px;font-weight: bolder;">$total</p>
+            <img onclick="deleteitem()"style="cursor: pointer;width: 10px;height: 15px;position:relative; bottom:5px;left:70px"src="../images/icon-delete.svg" alt="">
           </div>
           
           
+          
         </div>
-        
+        <button class="displaynone"id="checkout"style="cursor:pointer;font-family:'Kumbh Sans', sans-serif;font-weight:bolder;font-size:x-small;color:white;background-color:hsl(26, 100%, 55%);border: 0px;border-radius:10px;width: 220px;height: 40px;">Checkout</button>
         </div>
       </div>
       
     </div>
 </div>
+
 <div class="big">
-  <div class="containerimg"></div>
+  <div class="containerimg" >
+
+    <!-- style="display:flex;justify-content:center;align-items: center;" -->
+    <div style="display:flex;justify-content: center;align-items: center;">
+      <img src="../images/image-product-1.jpg" style="position:relative;border-radius: 10px;width:350px;height: 350px;margin: 30px;" alt="product 1 image">
+    </div>
+    
+   <div style="display:flex;justify-content:center;">
+
+     <!-- thumbnails -->
+    <img class="thumbnailimg"src="../images/image-product-1-thumbnail.jpg" alt="">
+    <img class="thumbnailimg"src="../images/image-product-2-thumbnail.jpg" alt="">
+    <img class="thumbnailimg"src="../images/image-product-3-thumbnail.jpg" alt="">
+    <img class="thumbnailimg"src="../images/image-product-4-thumbnail.jpg" alt="">
+  </div>
+    
+
+
+  </div>
+
+  <!-- container text -->
   <div class="containertxt">
       <h5 style="color:hsl(26, 100%, 55%)">SNEAKER COMPANY</h5>
       <h1 style="color:hsl(220, 13%, 13%)" id="shoes-name">Fall Limited Edition<br>Sneakers</h1>
