@@ -20,7 +20,6 @@
   <div class="main">
   <div >
     <h1 class="title" style="color:hsl(220, 13%, 13%)">sneakers</h1>
-    <button class="navButton">Home</button>
     <button class="navButton">Collections</button>
     <button class="navButton">Men</button>
     <button class="navButton">Women</button>
@@ -127,7 +126,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Nora Alobaidi</a>.
   </div>
 
 
@@ -137,11 +136,11 @@
   <div onclick="closelightbox()"style="cursor:pointer;filter:brightness(300%);display: flex;justify-content: flex-end;"><img src="../images/icon-close.svg" alt=""></div> <!--close-->
   
   <div style="display:flex;justify-content:center;align-items: center;margin-bottom: 10px;">
-    <div style="width:40px;height:40px;background-color:white;border-radius:100%;display:flex;align-items:center;justify-content: center;position: relative;left:20px">
+    <div onclick="preimg()"style="cursor:pointer;width:40px;height:40px;background-color:white;border-radius:100%;display:flex;align-items:center;justify-content: center;position: relative;left:20px">
       <img style="width: fit-content;height: fit-content;"src="../images/icon-previous.svg" alt="">
     </div>
     <img id="lb-big-img"style="width:450px; height: 450px;border-radius: 10px;margin-top: 5px;"src="../images/image-product-1.jpg" alt="">
-    <div style="width:40px;height:40px;background-color:white;border-radius:100%;display:flex;align-items:center;justify-content: center;position: relative;right:20px">
+    <div onclick="nextimg()"style="cursor:pointer;width:40px;height:40px;background-color:white;border-radius:100%;display:flex;align-items:center;justify-content: center;position: relative;right:20px">
        <img style="width: fit-content;height: fit-content;"src="../images/icon-next.svg" alt=""></div>
    
   </div><!--big image-->

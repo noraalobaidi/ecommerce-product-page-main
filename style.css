@@ -13,10 +13,26 @@ body{
 }
 .navButton{
     cursor: pointer;
+    background-color: white;
+    
+    border:solid rgb(255, 255, 255) 5px;
+    font-family:'Kumbh Sans', sans-serif;
+    color:hsl(219, 9%, 45%);
+    margin-left:15px;
+    
+    position: relative;
+    top:7px;
+    height: 50px;
+}
+.navButton:hover{
+    border-bottom:solid hsl(26, 100%, 55%) 3px;
+
+
+
 }
 .cart{
     position: relative;
-    left: 600px;
+    left: 550px;
 }
 .cartAmount{
     font-size:8px;
@@ -28,8 +44,8 @@ body{
     align-items: center;
     border-radius: 10px;
     z-index: 1;
-    right: 75px;
-    bottom: 553px;
+    right: 45px;
+    bottom: 565px;
     height: 10px;
     width: 15px;
     margin: 0px;
@@ -62,7 +78,7 @@ body{
     width:40px;
     height:40px;
     position: relative;
-    left: 620px;
+    left: 560px;
     top:5px;
     border-radius: 50px;
     border: 2px solid rgb(255, 255, 255);

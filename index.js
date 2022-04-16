@@ -1,6 +1,7 @@
 //initilize product amount to 0
 document.getElementById("amount").innerHTML = 0;
 let cartElements = 0;
+let slide = 1;
 
 //decrese amount of item by 1
 function removeOne() {
@@ -110,6 +111,7 @@ function changeimglightbox(id) {
     bigimg.src = "../images/image-product-1.jpg"; //change to img 1
     document.getElementById("lbthumb1").style.borderColor =
       "hsl(26, 100%, 55%)";
+    slide = 1;
     document.getElementById("lbthumb1").style.opacity = "60%";
     document.getElementById("lbthumb2").style.borderColor = "rgba(0, 0, 0, 0)";
     document.getElementById("lbthumb2").style.opacity = "100%";
@@ -121,6 +123,7 @@ function changeimglightbox(id) {
     bigimg.src = "../images/image-product-2.jpg"; //change to img 2
     document.getElementById("lbthumb2").style.borderColor =
       "hsl(26, 100%, 55%)";
+    slide = 2;
     document.getElementById("lbthumb2").style.opacity = "60%";
     document.getElementById("lbthumb1").style.borderColor = "rgba(0, 0, 0, 0)";
     document.getElementById("lbthumb1").style.opacity = "100%";
@@ -132,6 +135,7 @@ function changeimglightbox(id) {
     bigimg.src = "../images/image-product-3.jpg"; //change to img 3
     document.getElementById("lbthumb3").style.borderColor =
       "hsl(26, 100%, 55%)";
+    slide = 3;
     document.getElementById("lbthumb3").style.opacity = "60%";
     document.getElementById("lbthumb1").style.borderColor = "rgba(0, 0, 0, 0)";
     document.getElementById("lbthumb1").style.opacity = "100%";
@@ -143,6 +147,7 @@ function changeimglightbox(id) {
     bigimg.src = "../images/image-product-4.jpg"; //change to img 4
     document.getElementById("lbthumb4").style.borderColor =
       "hsl(26, 100%, 55%)";
+    slide = 4;
     document.getElementById("lbthumb4").style.opacity = "60%";
     document.getElementById("lbthumb1").style.borderColor = "rgba(0, 0, 0, 0)";
     document.getElementById("lbthumb1").style.opacity = "100%";
@@ -161,4 +166,46 @@ function openlightbox() {
 
 function closelightbox() {
   document.getElementById("lightbox").className = "displaynone";
+}
+
+function nextimg() {
+  if (slide < 4) {
+    if (slide == 1) {
+      document.getElementById("lb-big-img").src =
+        "../images/image-product-2.jpg";
+      slide++;
+    } else if (slide == 2) {
+      document.getElementById("lb-big-img").src =
+        "../images/image-product-3.jpg";
+      slide++;
+    } else if (slide == 3) {
+      document.getElementById("lb-big-img").src =
+        "../images/image-product-4.jpg";
+      slide++;
+    }
+  } else if (slide == 4) {
+    slide = 1;
+    document.getElementById("lb-big-img").src = "../images/image-product-1.jpg";
+  }
+}
+
+function preimg() {
+  if (slide == 1) {
+    slide = 4;
+    document.getElementById("lb-big-img").src = "../images/image-product-4.jpg";
+  } else if (slide <= 4) {
+    if (slide == 4) {
+      document.getElementById("lb-big-img").src =
+        "../images/image-product-3.jpg";
+      slide--;
+    } else if (slide == 3) {
+      document.getElementById("lb-big-img").src =
+        "../images/image-product-2.jpg";
+      slide--;
+    } else if (slide == 2) {
+      document.getElementById("lb-big-img").src =
+        "../images/image-product-1.jpg";
+      slide--;
+    }
+  }
 }
