@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
@@ -17,7 +17,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div class="main">
   <div >
     <h1 class="title" style="color:hsl(220, 13%, 13%)">sneakers</h1>
     <button class="navButton">Home</button>
@@ -62,7 +62,7 @@
 
     <!-- style="display:flex;justify-content:center;align-items: center;" -->
     <div style="display:flex;justify-content: center;align-items: center;">
-      <img class="bigimg"id="big-img" src="../images/image-product-1.jpg" alt="product 1 image">
+      <img onclick="openlightbox()"class="bigimg"id="big-img" src="../images/image-product-1.jpg" alt="product 1 image">
     </div>
     
    <div style="display:flex;justify-content:center;">
@@ -133,7 +133,30 @@
 
 
  
+ <div class="displaynone"id="lightbox">
+  <div onclick="closelightbox()"style="cursor:pointer;filter:brightness(300%);display: flex;justify-content: flex-end;"><img src="../images/icon-close.svg" alt=""></div> <!--close-->
+  
+  <div style="display:flex;justify-content:center;align-items: center;margin-bottom: 10px;">
+    <div style="width:40px;height:40px;background-color:white;border-radius:100%;display:flex;align-items:center;justify-content: center;position: relative;left:20px">
+      <img style="width: fit-content;height: fit-content;"src="../images/icon-previous.svg" alt="">
+    </div>
+    <img id="lb-big-img"style="width:450px; height: 450px;border-radius: 10px;margin-top: 5px;"src="../images/image-product-1.jpg" alt="">
+    <div style="width:40px;height:40px;background-color:white;border-radius:100%;display:flex;align-items:center;justify-content: center;position: relative;right:20px">
+       <img style="width: fit-content;height: fit-content;"src="../images/icon-next.svg" alt=""></div>
+   
+  </div><!--big image-->
+  <div style="background-color: rgba(0, 0, 0, 0);display: flex;justify-content: space-evenly;">
+    <img onclick="changeimglightbox(lbthumb1)"id="lbthumb1"style="cursor:pointer;border:2px solid rgba(255, 255, 255,0);width: 70px;height: 70px;border-radius: 10px;margin:5px"id="thumb1"src="../images/image-product-1-thumbnail.jpg" alt="">
+    <img onclick="changeimglightbox(lbthumb2)"id="lbthumb2"style="cursor:pointer;border:2px solid rgba(255, 255, 255,0);width: 70px;height: 70px;border-radius: 10px;margin:5px"id="thumb2"src="../images/image-product-2-thumbnail.jpg" alt="">
+    <img onclick="changeimglightbox(lbthumb3)"id="lbthumb3"style="cursor:pointer;border:2px solid rgba(255, 255, 255,0);width: 70px;height: 70px;border-radius: 10px;margin:5px"id="thumb3"src="../images/image-product-3-thumbnail.jpg" alt="">
+    <img onclick="changeimglightbox(lbthumb4)"id="lbthumb4"style="cursor:pointer;border:2px solid rgba(255, 255, 255,0);width: 70px;height: 70px;border-radius: 10px;margin:5px"id="thumb4"src="../images/image-product-4-thumbnail.jpg" alt="">
+  </div><!--thumbnails-->
+
+</div>
  
+</div>
+ 
+<!-- </div> -->
 </body>
  <!-- script / linking the js with html -->
 <script src="index.js"></script>

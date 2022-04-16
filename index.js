@@ -102,3 +102,63 @@ function changeimg(id) {
     document.getElementById("thumb3").style.borderColor = "white";
   }
 }
+
+function changeimglightbox(id) {
+  let bigimg = document.getElementById("lb-big-img"); //get big image
+
+  if (id == document.getElementById("lbthumb1")) {
+    bigimg.src = "../images/image-product-1.jpg"; //change to img 1
+    document.getElementById("lbthumb1").style.borderColor =
+      "hsl(26, 100%, 55%)";
+    document.getElementById("lbthumb1").style.opacity = "60%";
+    document.getElementById("lbthumb2").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb2").style.opacity = "100%";
+    document.getElementById("lbthumb3").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb3").style.opacity = "100%";
+    document.getElementById("lbthumb4").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb4").style.opacity = "100%";
+  } else if (id == document.getElementById("lbthumb2")) {
+    bigimg.src = "../images/image-product-2.jpg"; //change to img 2
+    document.getElementById("lbthumb2").style.borderColor =
+      "hsl(26, 100%, 55%)";
+    document.getElementById("lbthumb2").style.opacity = "60%";
+    document.getElementById("lbthumb1").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb1").style.opacity = "100%";
+    document.getElementById("lbthumb3").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb3").style.opacity = "100%";
+    document.getElementById("lbthumb4").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb4").style.opacity = "100%";
+  } else if (id == document.getElementById("lbthumb3")) {
+    bigimg.src = "../images/image-product-3.jpg"; //change to img 3
+    document.getElementById("lbthumb3").style.borderColor =
+      "hsl(26, 100%, 55%)";
+    document.getElementById("lbthumb3").style.opacity = "60%";
+    document.getElementById("lbthumb1").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb1").style.opacity = "100%";
+    document.getElementById("lbthumb2").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb2").style.opacity = "100%";
+    document.getElementById("lbthumb4").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb4").style.opacity = "100%";
+  } else if (id == document.getElementById("lbthumb4")) {
+    bigimg.src = "../images/image-product-4.jpg"; //change to img 4
+    document.getElementById("lbthumb4").style.borderColor =
+      "hsl(26, 100%, 55%)";
+    document.getElementById("lbthumb4").style.opacity = "60%";
+    document.getElementById("lbthumb1").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb1").style.opacity = "100%";
+    document.getElementById("lbthumb2").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb2").style.opacity = "100%";
+    document.getElementById("lbthumb3").style.borderColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("lbthumb3").style.opacity = "100%";
+  } else {
+    console.log("wrong");
+  }
+}
+
+function openlightbox() {
+  document.getElementById("lightbox").className = "lightbox";
+}
+
+function closelightbox() {
+  document.getElementById("lightbox").className = "displaynone";
+}
