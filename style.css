@@ -1,100 +1,211 @@
-body{
+/* mobile styling */
+*{
     font-family:'Kumbh Sans', sans-serif;
-    /* padding:10px; */
-    position: relative;
 }
-.menubtn{
-    display: inline;
-    width: 15px;
-    height: 15px;
-    margin-right:20px ;
+.desktop{
+    display:none;
 }
-.main{
-    background-color:green;
-}
-
-.title{
-    color: black;
-    font-size:30px;
-    display: inline;
+.mobile{
+    max-width:357px;
+    /* background-color: cadetblue; */
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .header{
-    /* height: 100px; */
-}
-
-.navButton{
-    /* cursor: pointer;
-    background-color: white;
-    
-    border:solid rgb(255, 255, 255) 5px;
-    font-family:'Kumbh Sans', sans-serif;
-    color:hsl(219, 9%, 45%);
-    margin-left:15px;
-    
-    position: relative;
-    top:7px;
-    height: 50px; */
-
-    /* display:none; */
-}
-.cart{
-    margin-left:80px;
-    /* display: inline; */
-    
-
+ 
+    display:grid;
+    grid-template-columns:max-content 260px 20px 30px;
+    gap: 10px;
+    align-items: center;
+    max-width:357px;
 }
 .avatar{
-    position: relative;
     width: 25px;
     height: 25px;
-    /* bottom:55px;
-    left:275px; */
-
+    cursor: pointer;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.avatar:hover{
+    border-color: hsl(26, 100%, 55%);
+    
 }
 
-.showCart{
-    width: 250px;
-    height:fit-content;
-    background-color:rgb(255, 255, 255);
-    box-shadow: 0px 24px 43px 7px #68707d;
+.img{
+    display:flex;
+    /* background-color: brown; */
+    align-items: center;
+    
+
+}
+.shoesprice{
+    display: inline;
+    color:hsl(220, 13%, 13%);
+    margin:0;
+    font-size:30px;
+    
+}
+
+
+.price{
+    display: grid;
+    grid-template-columns:119px 119px 119px;
+    gap: 10px;
+    justify-items: center;
+}
+
+.discountbox{
+    position: relative;
+    top:7px;
+    right:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:hsl(25, 100%, 94%) ;
+    border-radius: 3px;
+    width: 40px;
+    height: 25px;
+    
+}
+.discount{
+    position: relative;
+    margin:0px;
+    color:hsl(26, 100%, 55%);
+    text-align: center;
+    font-size: 15px;
+
+}
+.pricebefore{
+    position: relative;
+    /* bottom:25px; */
+    margin: 0;
+    top:10px;
+    text-decoration: line-through;
+    color: hsl(220, 14%, 75%);
+    font-size: 15px;
+}
+.changeAmount{
+    
+    display: flex;
+    /* position: relative; */
+    /* margin:50px; */
+    background-color: hsl(223, 64%, 98%);
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.minus{
+    /* display:inline; */
+    position: relative;
+    background-color: hsl(223, 64%, 98%);
+    border:0px;
+    bottom: 3px;
+    cursor: pointer;
+
+    
+    /* border-color:hsl(223, 64%, 98%); ;
+    border-radius: 5px; */
+  
+    
+}
+.amount{
+    display:inline;
+    margin:25px;
+    
+}
+.plus{
+    /* display:inline; */
+    background-color: hsl(223, 64%, 98%);
+    border:0px;
+    cursor: pointer;
+    
+}
+.addToCart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-color: hsl(26, 100%, 55%);
+    background-color: hsl(26, 100%, 55%);
+    height: 40px;
+    width:350px;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+    cursor: pointer;
+}
+.displaynone{
+    display: none;
+}
+
+.mobilecartAmount{
+    font-size:8px;
+    color: white;
+    background-color:hsl(26, 100%, 55%);
+    display:flex;
     position: absolute;
-    left: 950px;
-    /* bottom:550px; */
-    z-index: 1;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
+    z-index: 1;
+    right: 45px;
+    bottom: 610px;
+    height: 10px;
+    width: 15px;
+    margin: 0px;
+    
 }
-.thumbanils{
-    display:none;
+
+.mobilemenubtn{
+    height: 50px;
+    width: 260px;
+    background-color: white;
+    font-weight:bolder;
+    border: 0px;
+    text-align: start;
+    color: black;
+
 }
-.bigimg{
-    height: 200px;
-    width: 375px;
-    object-fit: cover;
+.mobilemenubtn:hover{
+    height: 50px;
+    width: 260px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    font-weight:bolder;
+    border: 0px;
+    text-align: start;
+
 }
 
 
-
-
-@media only screen and (min-width: 1024px){
-body{
+/* desktop styling */
+@media only screen and (min-width:1024px){
+    .mobile{
+        display:none;
+    }
+.desktop{
+    display:contents;
+}
+    body{
     font-family:'Kumbh Sans', sans-serif;
     /* padding:10px; */
     position: relative;
 }
-.nav{
-    display:none;
-}
 /* navigation bar */
-.main{
+.desktop{
     max-width: 1440px;
-    min-width: 1024px;
-    background-color: white;
 }
 .title{
     display:inline;
     margin-right: 50px;
-    color:hsl(220, 13%, 13%);
-    font-size: 30px;
 }
 .navButton{
     cursor: pointer;
@@ -218,7 +329,7 @@ bottom:50px
 }
 .discountbox{
     position: relative;
-    bottom:5px;
+    bottom:50px;
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -226,6 +337,7 @@ bottom:50px
     border-radius: 3px;
     width: 30px;
     height: 20px;
+    left:10px;
     
 }
 .discount{
@@ -234,16 +346,14 @@ bottom:50px
     color:hsl(26, 100%, 55%);
     text-align: center;
     top:2px;
-}
-.thumbanils{
-    display:flex;
-    justify-content:center;
+    font-size: 13px;
 }
 .pricebefore{
     position: relative;
     bottom:25px;
     text-decoration: line-through;
-    color: hsl(220, 14%, 75%)
+    color: hsl(220, 14%, 75%);
+    font-size: 13px;
 }
 .changeAmount{
     
@@ -301,6 +411,7 @@ bottom:50px
     font-weight: bold;
     border-style: none;
     cursor: pointer;
+    top:10px;
 }
 .thumbnailimg{
 /* border:3px; */
@@ -346,9 +457,3 @@ height: 355px;
 }
 
 }
-
-/* mobile css style */
-/* @media only screen and (width: 375px){ */
-
-
-/* } */

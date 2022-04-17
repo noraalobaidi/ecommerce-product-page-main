@@ -17,10 +17,9 @@
    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="main">
-  <div class="header">
-    <img class="menubtn"src="../images/icon-menu.svg" alt="">
-    <h1 class="title">sneakers</h1>
+  <div class="desktop">
+  <div >
+    <h1 class="title" style="color:hsl(220, 13%, 13%)">sneakers</h1>
     <button class="navButton">Collections</button>
     <button class="navButton">Men</button>
     <button class="navButton">Women</button>
@@ -65,7 +64,7 @@
       <img onclick="openlightbox()"class="bigimg"id="big-img" src="../images/image-product-1.jpg" alt="product 1 image">
     </div>
     
-   <div class="thumbanils">
+   <div style="display:flex;justify-content:center;">
 
      <!-- thumbnails -->
     <img onclick="changeimg(thumb1)"id="thumb1"class="thumbnailimg"src="../images/image-product-1-thumbnail.jpg" alt="">
@@ -87,7 +86,7 @@
       <h3 class="price" id="shoes-price">$125.00</h3>
       <div class="discountbox"><h6 class="discount">50%</h6></div>
       <h6 class="pricebefore">$250.00</h6>
-      <div style="display:flex";>
+      <div style="display:flex">
         <div class="changeAmount">
           <button class="minus" onclick="removeOne()"><img src="../images/icon-minus.svg" alt="minus"></button>
           <h5 class="amount"id="amount" style="color:hsl(220, 13%, 13%)"></h5>
@@ -154,6 +153,103 @@
 
 </div>
  
+</div>
+
+<!-- mobile website -->
+
+<div class="mobile">
+  <div class="displaynone" id="mobile-menu" style="background-color:rgba(0, 0, 0, 0.714) ;width: 375px;height: 800px;position: absolute;z-index: 1;">
+  <div  style="background-color:white;height: 800px;width:260px;display: flex;  flex-direction: column;">
+  <img onclick="closemenu()"src="../images/icon-close.svg" style="width: 15px;  height: 15px;  margin-top: 50px;margin-left: 10px;margin-bottom: 20px;"alt="">
+  <div id="mobile-btn-container" style="display: flex;  flex-direction: column;">
+    <button class="mobilemenubtn">Collections</button>
+    <button class="mobilemenubtn">Men</button>
+    <button class="mobilemenubtn">Women</button>
+    <button class="mobilemenubtn">About</button>
+    <button class="mobilemenubtn">Contacts</button></div>
+  
+  </div>
+  </div>
+  
+<div class="header">
+  <img onclick="openmenu()" src="../images/icon-menu.svg" style="cursor: pointer;"alt="">
+  <h1>sneaker</h1>
+  <h6 class="displaynone" id="mobile-cart-amount"></h6>
+  <img onclick="mobilecartbox()"src="../images/icon-cart.svg" style="cursor: pointer;"alt="">
+  <img class="avatar"src="../images/image-avatar.png" alt="">
+</div>
+<div class="img">
+
+  <div onclick="mobilepreimg()"style="cursor:pointer;width:30px;height:30px;background-color:white;border-radius:100%;display:flex;align-items:center;justify-content: center;position: relative;left:40px">
+    <img src="../images/icon-previous.svg" alt="">
+  </div>
+  <img  id="mobile-img"style="width:357px;height: 290px;object-fit: cover;"src="../images/image-product-1.jpg" alt="">
+  <div onclick="mobilenextimg()"style="cursor:pointer;width:30px;height:30px;background-color:white;border-radius:100%;display:flex;align-items:center;justify-content: center;position: relative;right:40px" >
+     <img src="../images/icon-next.svg" alt="">
+    </div>
+
+</div>
+<!-- hahahah -->
+<div  class="displaynone"id="mobile-show-cart" style="position:absolute;bottom:400px;background-color:white;width:350px;height: 160px;border-radius: 10px;">
+
+  <div style="padding:10px"><h5 style="margin: 0;">Cart</h5></div>
+  <hr style="color:hsl(230, 29%, 92%)">
+  <div >
+    <div id="mobile-cart"style="margin:10px;">
+      <p id="mobile-empty-cart"style="text-align:center">Your cart is empty.</p>
+    <div class="displaynone"id="mobile-item-in-cart" style="justify-content: left;height:fit-content;">
+      <img style="width: 40px;height: 40px;border-radius: 3px;display: inline;position: relative;bottom:5px"src="../images/image-product-1-thumbnail.jpg" alt="product img">
+      <div style="width:150px;display:inline-block;position:relative; bottom:10px;">
+        <p style="font-size: 11px;color:hsl(220, 14%, 75%);margin:0px;position: relative;">Fall Limited Edition Sneakers</p>
+        <p style="font-size: 11px;color:hsl(220, 14%, 75%);margin:0px;display: inline-block;position: relative;">$125.00 x </p>
+        <p id="mobile-item-amount" style="display: inline-block;position: relative;margin:0px;font-size: 11px;color:hsl(220, 14%, 75%)">amount</p>
+        <p id="mobile-total" style="display: inline-block;position: relative;margin:0px;font-size: 11px;font-weight: bolder;">$total</p>
+        <img onclick="mobiledeleteitem()"style="cursor: pointer;width: 10px;height: 15px;position:relative; bottom:5px;left:80px"src="../images/icon-delete.svg" alt="">
+      </div>
+      
+      
+      
+    </div>
+    <button class="displaynone"id="mobile-checkout"style="cursor:pointer;font-family:'Kumbh Sans', sans-serif;font-weight:bolder;font-size:x-small;color:white;background-color:hsl(26, 100%, 55%);border: 0px;border-radius:10px;width: 330px;height: 40px;">Checkout</button>
+    </div>
+  </div>
+  
+</div>
+<div class="description">
+  <h5 style="color:hsl(26, 100%, 55%)">SNEAKER COMPANY</h5>
+  <h1 style="color:hsl(220, 13%, 13%)" id="shoes-name">Fall Limited Edition<br>Sneakers</h1>
+  <p style="font-size:16px;text-align: justify;color:hsl(219, 9%, 45%)">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+</div>
+<div class="price">
+  <h3 class="shoesprice" id="mobile-shoes-price">$125.00</h3>
+      <div class="discountbox"><h6 class="discount">50%</h6></div>
+      <h6 class="pricebefore">$250.00</h6>
+</div>
+<div class="buy">
+  <div class="changeAmount">
+    <button class="minus" onclick="mobileremoveOne()"><img src="../images/icon-minus.svg" alt="minus"></button>
+    <h5 class="amount"id="mobile-amount" style="color:hsl(220, 13%, 13%)"></h5>
+    
+    <button class="plus"onclick="mobileaddOne()"><img src="../images/icon-plus.svg" alt="plus"></button>
+  </div>
+  <button class="addToCart" onclick="mobileaddToCart()"><img style="filter:brightness(300%);margin-right: 20px;width:15px;height: 15px;"src="../images/icon-cart.svg" alt="profile">Add to cart</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
  
 <!-- </div> -->
